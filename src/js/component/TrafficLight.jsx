@@ -9,8 +9,9 @@ const TrafficLight = () => {
     };
 
     useEffect(() => {
+        let interval;
         if (active) {
-            const interval = setInterval(() => {
+            interval = setInterval(() => {
                 if (selectedLight == "") {
                     setSelectedLight("red");
                 } else if (selectedLight == "red") {
@@ -21,8 +22,8 @@ const TrafficLight = () => {
                     setSelectedLight("red");
                 }
             }, 3000);
-            return () => clearInterval(interval);
         }
+        return () => clearInterval(interval);
     }, [active, selectedLight]);
 
     return (
@@ -46,7 +47,10 @@ const TrafficLight = () => {
                     onClick={() => handleLightClick("green")}
                 ></div>
             </div>
-            <button onClick={() => setActive(!active)} className="btn btn-dark">
+            <button
+                onClick={() => setActive((prev) => !prev)}
+                className="btn btn-dark"
+            >
                 Automatic
             </button>
         </main>
