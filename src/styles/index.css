@@ -21,13 +21,13 @@ body {
 .stick {
     border: 15px solid black;
     width: 20px;
-    height: 180px;
+    height: 50px;
     margin: 0 auto;
 }
 
 .traffic-light {
     border: 1px solid black;
-    width: 150px;
+    width: 125px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -38,8 +38,8 @@ body {
 }
 
 .traffic-light div {
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -56,6 +56,10 @@ body {
 
 .green {
     background-color: green;
+}
+
+.purple {
+    background-color: purple;
 }
 
 .light {
